@@ -1,0 +1,10 @@
+[Unit]
+Description=GeoIP-Seeker-Server daemon
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/geoip-seeker-server
+ExecStart=/opt/geoip-seeker-server/geoip-seeker-server
+
+[Install]
+WantedBy=multi-user.target

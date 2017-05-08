@@ -1,0 +1,13 @@
+{
+  "listen": "127.0.0.1:4000",
+  "services": {
+    "/ipip.net": {
+      "name": "ipip.net",
+      "path": "data/17monipdb.dat"
+    },
+    "/qqwry": {
+      "name": "qqwry",
+      "path": "data/qqwry.dat"
+    }
+  }
+}

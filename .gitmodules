@@ -1,0 +1,3 @@
+[submodule "geoip-seeker"]
+	path = geoip-seeker
+	url = https://github.com/xtomcom/geoip-seeker
