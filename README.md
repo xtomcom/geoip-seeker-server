@@ -4,7 +4,7 @@
 
 # Supported
 
-- [x] CZ88.NET QQWay
+- [x] CZ88.NET QQWry
 - [x] IPIP.NET DAT
 - [x] IPIP.NET DATX
 - [ ] MaxMind GeoIP2
