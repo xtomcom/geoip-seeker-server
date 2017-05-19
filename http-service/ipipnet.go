@@ -26,9 +26,15 @@ func makeIPIPNetHandler(path string) (http.Handler, error) {
 	handler := new(IPIPNetHandler)
 	switch {
 	case strings.HasSuffix(path, ".dat"):
-		handler.seeker = ipip_net.NewDAT(data)
+		handler.seeker, err = ipip_net.NewDAT(data)
+		if err != nil {
+			return nil, err
+		}
 	case strings.HasSuffix(path, ".datx"):
-		handler.seeker = ipip_net.NewDATX(data)
+		handler.seeker, err = ipip_net.NewDATX(data)
+		if err != nil {
+			return nil, err
+		}
 	}
 
 	mux.HandleFunc("/", handler.query)

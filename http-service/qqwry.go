@@ -21,7 +21,10 @@ func makeQQWryHandler(path string) (http.Handler, error) {
 	path = strings.ToLower(path)
 	mux := http.NewServeMux()
 	handler := new(QQWayHandler)
-	handler.seeker = qqwry.New(data)
+	handler.seeker, err = qqwry.New(data)
+	if err != nil {
+		return nil, err
+	}
 	mux.HandleFunc("/", handler.query)
 	mux.HandleFunc("/status", handler.status)
 	return mux, nil
